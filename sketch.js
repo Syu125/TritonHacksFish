@@ -56,6 +56,29 @@ for(let i = 0; i < 30; i++){
 	rectTrashes[i] = new rectTrash();
 }
 
+class Fish {
+	constructor(){
+	this.x = Math.random()*1350+150;;
+	this.y = Math.random()*1000+225 ;
+}
+}
+
+let fishes = [];
+for(let i = 0; i < 100; i++){
+	fishes[i] = new Fish();
+}
+
+function drawFish(x,y){
+	fill(255,215,0)
+	noStroke();
+	ellipse(x,y,20,20); 
+	//ellipse(x,y,width,h) --> fish body 
+	triangle(x+20, y-15, x+20, y+15,x+10,y);
+	//triangle( x & y of first point , x & y of second point, x & y of third point) fish tail
+}
+
+
+
 function draw() {
 	background('#b2fcff');
 	fill('#90e2fd');
@@ -68,5 +91,15 @@ function draw() {
 	for(var j = 0; j < rectTrashes.length; j++){
 		rectTrashes[j].draw();
 		rectTrashes[j].move();
+	}
+
+	for(let i = 0; i < fishes.length; i++){
+		if( fishes[i] != null){
+			drawFish(fishes[i].x, fishes[i].y)
+			fishes[i].x -= 5;
+			if(fishes[i].x <= 0){
+				fishes[i].x = windowWidth;
+			}
+		}
 	}
 }
