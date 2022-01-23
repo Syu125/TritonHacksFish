@@ -94,12 +94,10 @@ function draw() {
 	}
 
 	for(let i = 0; i < fishes.length; i++){
-		if( fishes[i] != null){
 			drawFish(fishes[i].x, fishes[i].y)
 			fishes[i].x -= 5;
 			if(fishes[i].x <= 0){
 				fishes[i].x = windowWidth;
 			}
-		}
 	}
 }
