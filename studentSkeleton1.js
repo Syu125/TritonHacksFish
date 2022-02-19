@@ -58,22 +58,19 @@ let rectTrash = function() {
 	this.yp = /*fill in the blank*/,
 	this.width = /*fill in the blank*/,
 	this.height = /*fill in the blank*/,
-	this.red = /*fill in the blank*/,
-	this.green = /*fill in the blank*/,
-	this.blue = /*fill in the blank*/
+	this.color = /*fill in the blank*/
 }
 
-function drawRectTrash( trash ){
+function drawRectTrash(trash){
 	stroke(0);
 	strokeWeight(2);
-	fill(trash.red, trash.green, trash.blue);
-	rect(trash.xp, trash.yp, trash.width, trash.height);
-	rectMode(CORNER);
+	fill(/*fill in the blank*/); // color
+	rect(/*fill in the blank*/); // x, y, width, height
 }
 
-function rectTrashMove( trash ){
-	trash.xp += /*fill in the blank*/,
-	trash.yp += /*fill in the blank*/
+function rectTrashMove(trash){
+	trash.xp += /*fill in the blank*/, // x displacement per frame
+	trash.yp += /*fill in the blank*/, // y displacement per frame
 }
 
 let rectTrashes = [];
@@ -99,7 +96,7 @@ function drawFish(xp,yp){
 	//triangle( x & y of first point , x & y of second point, x & y of third point) fish tail
 }
 
-function fishMove( fish ){
+function fishMove(fish){
 	fish.x -= 5;
 	if(fish.x <= -30){
 		fish.x = windowWidth + Math.random() * 100;
