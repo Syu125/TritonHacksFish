@@ -99,9 +99,9 @@ function drawFish(xp,yp){
 }
 
 function fishMove(fish){
-	fish.x -= 5;
-	if(fish.x <= -30){
-		fish.x = windowWidth + Math.random() * 100;
+	fish.xp -= 5;
+	if(fish.xp <= -30){
+		fish.xp = windowWidth + Math.random() * 100;
 	}
 }
 
@@ -131,7 +131,7 @@ function draw() {
 	}
 
 	for(let i = 0; i < fishes.length; i++){
-		drawFish(fishes[i].x, fishes[i].y);
+		drawFish(fishes[i].xp, fishes[i].yp);
 		fishMove(fish[i]);
 	}
 }
