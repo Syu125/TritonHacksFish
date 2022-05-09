@@ -61,6 +61,12 @@ let rectTrash = function() {
 	this.color = /*fill in the blank*/
 }
 
+let rectTrashes = [];
+for(let i = 0; i < /*number of trash*/; i++){
+	rectTrashes[i] = new rectTrash();
+}
+
+
 function drawRectTrash(trash){
 	stroke(0);
 	strokeWeight(2);
@@ -73,10 +79,6 @@ function rectTrashMove(trash){
 	trash.yp += /*fill in the blank*/, // y displacement per frame
 }
 
-let rectTrashes = [];
-for(let i = 0; i < /*number of trash*/; i++){
-	rectTrashes[i] = new rectTrash();
-}
 
 /////////////////////
 // FISH (PART 3)

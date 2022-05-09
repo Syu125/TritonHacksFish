@@ -30,27 +30,23 @@ function drawWave( x1, y1, y2){
 
 
 let rectTrash = function(){
-	this.xp = //fill in the blank//; xp = x point ( like on a xy graph)
-	this.yp = //fill in the blank//; xp = y point ( like on a xy graph)
-	this.width = //fill in the blank//;
-	this.height = //fill in the blank//
-	this.red = //fill in the blank//
-	this.green =//fill in the blank//
-	this.blue = //fill in the blank//
-
+	this.xp = /*fill in the x position*/,
+	this.yp = /*fill in the y position*/,
+	this.width = /*fill in the width*/,
+	this.height = /*fill in the height*/,
+	this.color = /*fill in the hex code for the color*/
 }
 
 function drawRectTrash( trash ){
 	stroke(0);
 	strokeWeight(2);
-	fill(trash.red, trash.green, trash.blue);
-	rect(trash.xp, trash.yp, trash.width, trash.height);
-	rectMode(CORNER);
+	fill(/*fill in how to access color in trash*/);
+	rect(/*fill in how to access x, y, width, height in trash*/);
 }
 
 function rectTrashMove( trash ){
-	trash.xp += //fill in the blank//;
-	trash.yp += //fill in the blank//;
+	trash.xp = /*fill in x displacement per frame*/;
+	trash.yp = /*fill in y displacement per frame*/;
 }
 
 
